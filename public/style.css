@@ -1,10 +1,82 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f9;
 }
 
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Map */
 #map {
-  height: 500px;
+  height: 100%;
   width: 100%;
-  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 320px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar Item */
+.sidebar-item {
+  background: #fff;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  transform: translateX(-5px);
+  background: #fffbf5;
+}
+
+.sidebar-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.sidebar-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+/* Scrollbar styling */
+#sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
 }
